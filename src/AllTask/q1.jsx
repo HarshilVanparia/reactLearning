@@ -3,20 +3,20 @@
 import { useState } from "react";
 
 function Caclulator() {
-  const [num1, setNum1] = useState("");
-  const [num2, setNum2] = useState("");
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
   
   const add = Number(num1) + Number(num2);
   const subtract = Number(num1) - Number(num2);
   const multiply = Number(num1) * Number(num2);
-  const divide = num2 !== "0" ? Number(num1) / Number(num2) : "Cannot divide by 0";
+  const divide = num2 !== 0 ? Number(num1) / Number(num2) : "Cannot divide by 0";
 
   return (
     <div className="card">
       <input
         type="number"
         placeholder="Enter first number"
-        onChange={(e) => setNum1(e.target.value)}
+        onChange={(e) => setNum1(Number(e.target.value))}
         value={num1}
       />
       <br />
@@ -24,7 +24,7 @@ function Caclulator() {
       <input
         type="number"
         placeholder="Enter second number"
-        onChange={(e) => setNum2(e.target.value)}
+        onChange={(e) => setNum2(Number(e.target.value))}
         value={num2}
       />
       <br />
