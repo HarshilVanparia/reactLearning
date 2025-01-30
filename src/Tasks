@@ -1,1 +1,5 @@
 create a functional component that will accept array of strings as an argument convert array into unordered list fetch data functon should return array of strings.
+
+1. create carousel (image changer) using useeffect. Place 4 images in public directory and change image at internal of 4 seconds 
+
+2. Implement count down timer using useeffect 5:00 4:59 4:00 3:59 3:00

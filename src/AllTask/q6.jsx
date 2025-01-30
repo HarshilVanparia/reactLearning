@@ -1,28 +1,35 @@
-import * as React from "react";
+import { useState, useEffect } from "react";
 
 function ApiCallSimulation() {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve({ id: 1, name: "RKU" });
+            resolve(["Ki", "Kaioken", "Kayo", "L"]);
         }, 4000);
     });
 }
 
-function ApiTesting() {
-    const [user, setUser] = React.useState({ id: "loading...", name: "loading..." }); // Combine state into a single object
+function ApiTestingTask() {
+    const [items, setItems] = useState([]);
 
-    React.useEffect(() => {
-        ApiCallSimulation().then((fetchedUser) => {
-            setUser(fetchedUser); // Update state with the fetched user object
+    useEffect(() => {
+        ApiCallSimulation().then((data) => {
+            setItems(data);
         });
-    }, []); // Add empty dependency array to avoid infinite re-renders
+    }, []);
+
 
     return (
         <div>
-            <h2>User ID: {user.id}</h2>
-            <h2>User Name: {user.name}</h2>
+            <h1>Fetched Items</h1>
+            <ul>
+                {items.length === 0 ? (
+                    <li>Loading...</li>
+                ) : (
+                    items.map((item, index) => <li key={index}>{item}</li>)
+                )}
+            </ul>
         </div>
     );
 }
 
-export default ApiTesting;
+export default ApiTestingTask;
