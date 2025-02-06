@@ -1,14 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import UserContextFinal from './usecontext3'
-// import ReqCancel from './classexample'
-
-// import ApiTesting from './useeffectexer'
+import ThreeStageForm from './AllTask/ThreeStageForm'
+// import UserContextFinal from './usecontext3'
+// import VolumeFInder from './AllTask/cube'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    
-    <UserContextFinal/>
-    
+    <ThreeStageForm/>
   </StrictMode>,
 )

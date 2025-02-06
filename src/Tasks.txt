@@ -1,0 +1,31 @@
+create a functional component that will accept array of strings as an argument convert array into unordered list fetch data functon should return array of strings.
+
+1. create carousel (image changer) using useeffect. Place 4 images in public directory and change image at internal of 4 seconds 
+
+2. Implement count down timer using useeffect 5:00 4:59 4:00 3:59 3:00
+
+
+
+3. create 3 stage form with following elements
+Page1 :: Stores all the basic details im text fom field 
+Name,
+surename,
+hobby,
+address(textbox),
+gender(radiobutton),
+city (dropdown)
+
+Page2 :: Education details : 
+10th standard percentage, 
+board>State,
+National,
+CBSE,
+International(radiobutton),
+hobbies > Painting, Singing, Dancing, Reading, Playing (checkbox)
+
+Page3 :: Cricket dropdown: 
+        domestic, International, state level
+        textbox for getting run
+
+Page4 :: Display all information in formatted table. 
+
